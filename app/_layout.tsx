@@ -1,9 +1,5 @@
 import { Slot } from "expo-router";
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
+import {  ThemeProvider } from "@/components/ui/theme-provider";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
@@ -31,14 +27,13 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-
   return (
-    <ThemeProvider value={colorScheme === "light" ? DarkTheme : DefaultTheme}>
+    <ThemeProvider>
       <AuthProvider>
         {/* expo-router insère automatiquement la bonne page ici */}
         <Slot />
-        
       </AuthProvider>
     </ThemeProvider>
   );
+  
 }

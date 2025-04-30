@@ -12,7 +12,7 @@ export default function LoginScreen() {
   const handleLogin = async () => {
     try {
       await login(email, password); // suppose que login est async
-      router.replace('/(tabs)/'); // redirection
+      router.replace('/(tabs)'); // redirection
     } catch (err) {
       console.log("Erreur de connexion", err);
     }

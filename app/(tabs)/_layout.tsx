@@ -9,13 +9,13 @@ export default function RootLayout() {
         headerShown: false,
         tabBarShowLabel: false,
         tabBarIcon: ({ color, size }) => {
-          if (route.name === "index") {
+          if (route.name === "(home)") {
             return <Feather name="home" size={moderateScale(24)} color={color} />;
-          } else if (route.name === "resources/index") {
+          } else if (route.name === "explore") {
             return <Ionicons name="compass-outline" size={moderateScale(24)} color={color} />;
-          } else if (route.name === "courses/index") {
+          } else if (route.name === "courses") {
             return <Feather name="book-open" size={moderateScale(24)} color={color} />;
-          } else if (route.name === "profile/index") {
+          } else if (route.name === "profile") {
             return <Feather name="user" size={moderateScale(24)} color={color} />;
           }
         },
@@ -23,10 +23,10 @@ export default function RootLayout() {
         tabBarInactiveTintColor: "#8e8e93",
       })}
     >
-      <Tabs.Screen name="index" />
-      <Tabs.Screen name="resources/index" />
-      <Tabs.Screen name="courses/index" />
-      <Tabs.Screen name="profile/index" />
+      <Tabs.Screen name="(home)" />
+      <Tabs.Screen name="exlpore" />
+      <Tabs.Screen name="courses" />
+      <Tabs.Screen name="profile" />
     </Tabs>
   );
 }

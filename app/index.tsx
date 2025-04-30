@@ -16,7 +16,7 @@ export default function Index() {
       router.replace("/(routes)/onboarding");
     } else if (user) {
       // Si l'utilisateur est authentifié, va à la page d'accueil
-      router.replace("/(tabs)/");
+      router.replace("/(tabs)");
     } else {
       // Sinon, redirige vers la page de connexion
       router.replace("/(routes)/auth");
