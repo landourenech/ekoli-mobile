@@ -16,7 +16,7 @@ export const fetchEvenement = async () => {
     useEffect(() => {
         const fetchEvenement = async () => {
             console.log("Récupération de tous les événements");
-            try {
+            try {   
                 const res = await axios.get(`${SERVER_URI}/evenements`);
                 console.log("Liste des événements :", res.data.evenements);
                 setEvenement(res.data.evenements);
